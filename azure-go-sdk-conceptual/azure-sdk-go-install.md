@@ -8,11 +8,11 @@ ms.date: 01/30/2018
 ms.topic: article
 ms.devlang: go
 manager: routlaw
-ms.openlocfilehash: f822a9304a4744e0b0e93286303aa8bb80fec852
-ms.sourcegitcommit: aaa8c37880332625f858a38f5918e6cf581bf48d
+ms.openlocfilehash: 7fc0a3ff71b0b06f616ae43cff311352fe873345
+ms.sourcegitcommit: 890f5f01a70e7e376e6bb98a2030afbfc016f538
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="installing-the-azure-sdk-for-go"></a>Installazione di Azure SDK per Go
 
@@ -30,7 +30,7 @@ go get -u -d github.com/Azure/azure-storage-blob-go/...
 
 ## <a name="vendoring-the-azure-sdk-for-go"></a>Eseguire il vendoring di Azure SDK per Go
 
-È possibile eseguire il vendoring di Azure SDK per Go tramite [dep](https://github.com/golang/dep). Per motivi di stabilità è consigliabile eseguire il vendoring. Per usare il supporto per `dep`, aggiungere `gitub.com/Azure/azure-sdk-for-go` a una sezione di `[[constraint]]` del file `Gopkg.toml`. Per eseguire ad esempio il vendoring sulla versione `14.0.0`, aggiungere la voce seguente:
+È possibile eseguire il vendoring di Azure SDK per Go tramite [dep](https://github.com/golang/dep). Per motivi di stabilità è consigliabile eseguire il vendoring. Per usare il supporto per `dep`, aggiungere `github.com/Azure/azure-sdk-for-go` a una sezione di `[[constraint]]` del file `Gopkg.toml`. Per eseguire ad esempio il vendoring sulla versione `14.0.0`, aggiungere la voce seguente:
 
 ```
 [[constraint]]
