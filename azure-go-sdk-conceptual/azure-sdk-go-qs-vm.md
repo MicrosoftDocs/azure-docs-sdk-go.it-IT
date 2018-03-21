@@ -8,11 +8,11 @@ ms.date: 02/08/2018
 ms.topic: quickstart
 ms.devlang: go
 manager: routlaw
-ms.openlocfilehash: e530d944deca40e9e6c29b6c2768e2367822714e
-ms.sourcegitcommit: aaa8c37880332625f858a38f5918e6cf581bf48d
+ms.openlocfilehash: ae460dbf21b13c40f3d564274f8b790afe005aae
+ms.sourcegitcommit: af3473779cd7c2978f290fbdc51ee15eb1130840
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>Guida introduttiva: Distribuire una macchina virtuale da un modello con Azure SDK per Go
 
@@ -32,7 +32,7 @@ Se si usa un'installazione locale dell'interfaccia della riga di comando di Azur
 
 ## <a name="create-a-service-principal"></a>Creare un'entità servizio
 
-Per accedere in modalità non interattiva con un'applicazione, è necessaria un'entità servizio. Le entità servizio sono parte dell'autenticazione in base al ruolo, che crea un'identità utente univoca. Per creare una nuova entità servizio con l'interfaccia della riga di comando, eseguire questo comando:
+Per accedere in modalità non interattiva con un'applicazione, è necessaria un'entità servizio. Le entità servizio rientrano nel controllo degli accessi in base al ruolo, che crea un'identità univoca per l'utente. Per creare una nuova entità servizio con l'interfaccia della riga di comando, eseguire questo comando:
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name az-go-vm-quickstart
@@ -79,7 +79,7 @@ go get -u -d github.com/azure-samples/azure-sdk-for-go-samples/quickstart/deploy
     }
 ```
 
-* `vm_password`: password per l'account utente della macchina virtuale. La lunghezza deve essere compresa tra 6 e 72 caratteri e deve includere 3 dei caratteri seguenti:
+* `vm_password`: password per l'account utente della macchina virtuale. Deve comprendere tra 12 e 72 caratteri e includere 3 dei caratteri seguenti:
   * Una lettera minuscola
   * Una lettera maiuscola
   * Un numero
