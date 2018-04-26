@@ -1,21 +1,21 @@
 ---
-title: Installazione di Azure SDK per Go
+title: Installare Azure SDK per Go
 description: Come installare, eseguire il vendoring e configurare Azure SDK per Go.
 author: sptramer
 ms.author: sttramer
-ms.date: 01/30/2018
+ms.date: 03/14/2018
 ms.topic: article
 ms.devlang: go
 manager: carmonm
-ms.openlocfilehash: 580daf4f2e91eabf97e3acd21bda183c559b57da
-ms.sourcegitcommit: fcc1786d59d2e32c97a9a8e0748e06f564a961bd
+ms.openlocfilehash: a6a92e080aea1a92f47a9d7083f133ca05a47541
+ms.sourcegitcommit: 26520a8c6e812facb5b9432d68c370fa23c99888
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="installing-the-azure-sdk-for-go"></a>Installazione di Azure SDK per Go
+# <a name="install-the-azure-sdk-for-go"></a>Installare Azure SDK per Go
 
-Introduzione ad Azure SDK per Go Questo SDK consente di gestire e interagire con i servizi di Azure dalle applicazioni Go.
+Introduzione ad Azure SDK per Go L'SDK consente di gestire i servizi di Azure dalle applicazioni Go e interagire con essi.
 
 ## <a name="get-the-azure-sdk-for-go"></a>Ottenere Azure SDK per Go
 
@@ -27,7 +27,7 @@ Per usare i BLOB del servizio di archiviazione di Azure è necessario un SDK dis
 go get -u -d github.com/Azure/azure-storage-blob-go/...
 ```
 
-## <a name="vendoring-the-azure-sdk-for-go"></a>Eseguire il vendoring di Azure SDK per Go
+## <a name="vendor-the-azure-sdk-for-go"></a>Eseguire il vendoring di Azure SDK per Go
 
 È possibile eseguire il vendoring di Azure SDK per Go tramite [dep](https://github.com/golang/dep). Per motivi di stabilità è consigliabile eseguire il vendoring. Per usare il supporto per `dep`, aggiungere `github.com/Azure/azure-sdk-for-go` a una sezione di `[[constraint]]` del file `Gopkg.toml`. Per eseguire ad esempio il vendoring sulla versione `14.0.0`, aggiungere la voce seguente:
 
@@ -37,7 +37,7 @@ name = "github.com/Azure/azure-sdk-for-go"
 version = "14.0.0"
 ```
 
-## <a name="including-the-azure-sdk-for-go-in-your-project"></a>Inclusione di Azure SDK per Go nel progetto
+## <a name="include-the-azure-sdk-for-go-in-your-project"></a>Includere Azure SDK per Go nel progetto
 
 Per usare i servizi di Azure dal codice di Go, importare eventuali servizi con cui si interagisce e i moduli `autorest` necessari.
 Si ottiene un elenco completo dei moduli disponibili da GoDoc per i [servizi disponibili](https://godoc.org/github.com/Azure/azure-sdk-for-go) e per i [pacchetti AutoRest](https://godoc.org/github.com/Azure/go-autorest). I pacchetti più comuni necessari da `go-autorest` sono:
