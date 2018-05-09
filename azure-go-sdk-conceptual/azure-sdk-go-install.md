@@ -3,15 +3,17 @@ title: Installare Azure SDK per Go
 description: Come installare, eseguire il vendoring e configurare Azure SDK per Go.
 author: sptramer
 ms.author: sttramer
-ms.date: 03/14/2018
-ms.topic: article
-ms.devlang: go
 manager: carmonm
-ms.openlocfilehash: a6a92e080aea1a92f47a9d7083f133ca05a47541
-ms.sourcegitcommit: 26520a8c6e812facb5b9432d68c370fa23c99888
+ms.date: 03/14/2018
+ms.topic: conceptual
+ms.prod: azure
+ms.technology: azure-sdk-go
+ms.devlang: go
+ms.openlocfilehash: ad77bdff881770512a828b19dc7af4821f4a55ad
+ms.sourcegitcommit: f08abf902b48f8173aa6e261084ff2cfc9043305
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-the-azure-sdk-for-go"></a>Installare Azure SDK per Go
 
@@ -62,7 +64,7 @@ import "github.com/Azure/azure-sdk-for-go/services/compute/mgmt/2017-03-30/compu
 
 È attualmente consigliabile usare la versione più recente di un servizio, a meno che non esistano motivi specifici per procedere diversamente.
 
-Se è necessario uno snapshot collettivo dei servizi, è anche possibile selezionare una singola versione del profilo. La versione dell'unico profilo bloccato è ora `2017-03-30`, che potrebbe non includere le funzionalità più recenti dei servizi. I profili sono disponibili nel modulo `profiles`, con la rispettiva versione in formato `YYYY-MM-DD`. I servizi vengono raggruppati sotto la rispettiva versione del profilo. Per importare ad esempio il modulo di gestione delle risorse di Azure dal profilo `2017-03-09`:
+Se è necessario uno snapshot collettivo dei servizi, è anche possibile selezionare una singola versione del profilo. La versione dell'unico profilo bloccato è ora `2017-03-09`, che potrebbe non includere le funzionalità più recenti dei servizi. I profili sono disponibili nel modulo `profiles`, con la rispettiva versione in formato `YYYY-MM-DD`. I servizi vengono raggruppati sotto la rispettiva versione del profilo. Per importare ad esempio il modulo di gestione delle risorse di Azure dal profilo `2017-03-09`:
 
 ```go
 import "github.com/Azure/azure-sdk-for-go/profiles/2017-03-09/resources/mgmt/resources"
