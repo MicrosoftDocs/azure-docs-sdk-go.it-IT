@@ -4,16 +4,19 @@ description: Informazioni sui metodi di autenticazione disponibili in Azure SDK 
 services: azure
 author: sptramer
 ms.author: sttramer
-ms.date: 04/03/2018
-ms.topic: article
-ms.service: azure
-ms.devlang: go
 manager: carmonm
-ms.openlocfilehash: 39f9dc5a7cdf9ab84cfd9264446bacb31392ca80
-ms.sourcegitcommit: 59d2b4c9d8da15fbbd15e36551093219fdaf256e
+ms.date: 04/03/2018
+ms.topic: conceptual
+ms.prod: azure
+ms.technology: azure-sdk-go
+ms.devlang: go
+ms.service: active-directory
+ms.component: authentication
+ms.openlocfilehash: 370f5607b89c0044022f7987d06c3a55c9d6f352
+ms.sourcegitcommit: f08abf902b48f8173aa6e261084ff2cfc9043305
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="authentication-methods-in-the-azure-sdk-for-go"></a>Metodi di autenticazione in Azure SDK per Go
 
@@ -84,6 +87,27 @@ Quando si usa l'autenticazione basata su ambiente, chiamare la funzione [NewAuth
 import "github.com/Azure/go-autorest/autorest/azure/auth"
 authorizer, err := auth.NewAuthorizerFromEnvironment()
 ```
+
+### <a name="authentication-on-azure-stack"></a>Autenticazione in Azure Stack
+
+Per autenticarsi in Azure Stack, è necessario impostare le variabili seguenti:
+
+| Variabile di ambiente | DESCRIZIONE  |
+|----------------------|--------------|
+| `AZURE_AD_ENDPOINT` | Endpoint di Active Directory. |
+| `AZURE_AD_RESOURCE` | ID risorsa di Active Directory. |
+
+Queste variabili possono essere recuperate dalle informazioni sui metadati di Azure Stack. Per recuperare i metadati, aprire un Web browser nel proprio ambiente di Azure Stack e utilizzare l'URL: `(ResourceManagerURL)/metadata/endpoints?api-version=1.0`
+
+`ResourceManagerURL` varia in base al nome dell'area, al nome del computer e al nome di dominio completo esterno (FQDN) della distribuzione di Azure Stack:
+
+| Environment | ResourceManagerURL |
+|----------------------|--------------|
+| Kit di sviluppo | `https://management.local.azurestack.external/` |
+| Sistemi integrati | `https://management.(region).ext-(machine-name).(FQDN)` |
+
+Per altre informazioni su come usare Azure SDK per Go in Azure Stack, vedere [Usare profili di versioni delle API con Go in Azure Stack](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-version-profiles-go)
+
 
 ## <a name="use-file-based-authentication"></a>Usare l'autenticazione basata su file
 
