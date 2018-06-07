@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.prod: azure
 ms.technology: azure-sdk-go
 ms.devlang: go
-ms.openlocfilehash: ad77bdff881770512a828b19dc7af4821f4a55ad
-ms.sourcegitcommit: f08abf902b48f8173aa6e261084ff2cfc9043305
+ms.openlocfilehash: 8423b3fedd89e57662bf96f777a5b30926914da9
+ms.sourcegitcommit: b81b17cbb934399c195bfdcb87137aee935f5234
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34755516"
 ---
 # <a name="install-the-azure-sdk-for-go"></a>Installare Azure SDK per Go
 
@@ -23,11 +24,14 @@ Introduzione ad Azure SDK per Go L'SDK consente di gestire i servizi di Azure da
 
 [!INCLUDE [azure-sdk-go-get](includes/azure-sdk-go-get.md)]
 
-Per usare i BLOB del servizio di archiviazione di Azure è necessario un SDK distinto.
+Alcuni servizi di Azure includono un proprio SDK per Go e non sono compresi nel pacchetto Azure SDK per Go di base. La tabella seguente elenca i servizi con SDK propri e i relativi nomi di pacchetto. Questi pacchetti vengono tutti considerati in anteprima.
 
-```bash
-go get -u -d github.com/Azure/azure-storage-blob-go/...
-```
+| Service | Pacchetto |
+|---------|---------|
+| Archiviazione BLOB | [github.com/Azure/azure-storage-blob-go](https://github.com/Azure/azure-storage-blob-go) |
+| Archiviazione file | [github.com/Azure/azure-storage-file-go](https://github.com/Azure/azure-storage-file-go) |
+| Hub eventi | [github.com/Azure/azure-event-hubs-go](https://github.com/Azure/azure-event-hubs-go) |
+| Application Insights | [github.com/Microsoft/ApplicationInsights-go](https://github.com/Microsoft/ApplicationInsights-go) |
 
 ## <a name="vendor-the-azure-sdk-for-go"></a>Eseguire il vendoring di Azure SDK per Go
 
