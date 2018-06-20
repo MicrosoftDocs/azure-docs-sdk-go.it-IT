@@ -15,6 +15,7 @@ ms.sourcegitcommit: f08abf902b48f8173aa6e261084ff2cfc9043305
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32319697"
 ---
 # <a name="azure-sdk-for-go-samples-for-compute-and-networking"></a><span data-ttu-id="c691c-103">Esempi di Azure SDK per Go per il calcolo e la rete</span><span class="sxs-lookup"><span data-stu-id="c691c-103">Azure SDK for Go samples for compute and networking</span></span>
 
