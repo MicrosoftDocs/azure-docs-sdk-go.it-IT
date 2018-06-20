@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: azure
 ms.technology: azure-sdk-go
 ms.devlang: go
-ms.openlocfilehash: 8423b3fedd89e57662bf96f777a5b30926914da9
-ms.sourcegitcommit: b81b17cbb934399c195bfdcb87137aee935f5234
+ms.openlocfilehash: 3388359bba791c87025b6ffd0e6b476f95589f73
+ms.sourcegitcommit: 81e97407e6139375bf7357045e818c87a17dcde1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34755516"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262981"
 ---
 # <a name="install-the-azure-sdk-for-go"></a>Installare Azure SDK per Go
 
@@ -30,7 +30,9 @@ Alcuni servizi di Azure includono un proprio SDK per Go e non sono compresi nel 
 |---------|---------|
 | Archiviazione BLOB | [github.com/Azure/azure-storage-blob-go](https://github.com/Azure/azure-storage-blob-go) |
 | Archiviazione file | [github.com/Azure/azure-storage-file-go](https://github.com/Azure/azure-storage-file-go) |
+| Coda di archiviazione | [github.com/Azure/azure-storage-queue-go](https://github.com/Azure/azure-storage-queue-go) |
 | Hub eventi | [github.com/Azure/azure-event-hubs-go](https://github.com/Azure/azure-event-hubs-go) |
+| Bus di servizio | [github.com/Azure/azure-service-bus-go](https://github.com/Azure/azure-service-bus-go) |
 | Application Insights | [github.com/Microsoft/ApplicationInsights-go](https://github.com/Microsoft/ApplicationInsights-go) |
 
 ## <a name="vendor-the-azure-sdk-for-go"></a>Eseguire il vendoring di Azure SDK per Go
