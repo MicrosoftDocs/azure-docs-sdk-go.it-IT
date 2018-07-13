@@ -10,16 +10,16 @@ ms.prod: azure
 ms.technology: azure-sdk-go
 ms.service: virtual-machines
 ms.devlang: go
-ms.openlocfilehash: 1fbcc54df2a2aebce56c5a5800361f3d3aed1ccc
-ms.sourcegitcommit: f08abf902b48f8173aa6e261084ff2cfc9043305
+ms.openlocfilehash: 7592e8617436a76dd27cac5269971051982425bf
+ms.sourcegitcommit: 181d4e0b164cf39b3feac346f559596bd19c94db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32319935"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38067017"
 ---
 # <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>Guida introduttiva: Distribuire una macchina virtuale da un modello con Azure SDK per Go
 
-Questa guida introduttiva è incentrata sulla distribuzione di risorse da un modello con Azure SDK per Go. I modelli sono snapshot di tutte le risorse incluse in un [gruppo di risorse di Azure](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview). Sarà possibile acquisire familiarità con la funzionalità e le convenzioni dell'SDK durante l'esecuzione di un'attività utile.
+Questa guida introduttiva è incentrata sulla distribuzione di risorse da un modello con Azure SDK per Go. I modelli sono snapshot di tutte le risorse incluse in un [gruppo di risorse di Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). Sarà possibile acquisire familiarità con la funzionalità e le convenzioni dell'SDK durante l'esecuzione di un'attività utile.
 
 Al termine della guida introduttiva sarà disponibile una VM in esecuzione a cui si accede con un nome utente e una password.
 
@@ -35,8 +35,7 @@ Se si usa un'installazione locale dell'interfaccia della riga di comando di Azur
 
 ## <a name="create-a-service-principal"></a>Creare un'entità servizio
 
-
-Per accedere in modalità non interattiva con un'applicazione, è necessaria un'entità servizio. Le entità servizio rientrano nel controllo degli accessi in base al ruolo, che crea un'identità univoca per l'utente. Per creare una nuova entità servizio con l'interfaccia della riga di comando, eseguire questo comando:
+Per accedere in modalità non interattiva ad Azure con un'applicazione, è necessaria un'entità servizio. Le entità servizio rientrano nel controllo degli accessi in base al ruolo, che crea un'identità univoca per l'utente. Per creare una nuova entità servizio con l'interfaccia della riga di comando, eseguire questo comando:
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name az-go-vm-quickstart --sdk-auth > quickstart.auth
