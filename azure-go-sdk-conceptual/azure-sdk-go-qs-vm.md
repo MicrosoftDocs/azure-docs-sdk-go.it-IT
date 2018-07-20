@@ -4,18 +4,18 @@ description: Distribuire una macchina virtuale tramite Azure SDK per Go.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
-ms.date: 04/03/2018
+ms.date: 07/13/2018
 ms.topic: quickstart
 ms.prod: azure
 ms.technology: azure-sdk-go
 ms.service: virtual-machines
 ms.devlang: go
-ms.openlocfilehash: 7592e8617436a76dd27cac5269971051982425bf
-ms.sourcegitcommit: 181d4e0b164cf39b3feac346f559596bd19c94db
+ms.openlocfilehash: 6b1de35748fb7694d45715fa7f028d5730530d2e
+ms.sourcegitcommit: d1790b317a8fcb4d672c654dac2a925a976589d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38067017"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039557"
 ---
 # <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>Guida introduttiva: Distribuire una macchina virtuale da un modello con Azure SDK per Go
 
@@ -27,9 +27,9 @@ Al termine della guida introduttiva sarà disponibile una VM in esecuzione a cui
 
 [!INCLUDE [cloud-shell-try-it.md](includes/cloud-shell-try-it.md)]
 
-Se si usa un'installazione locale dell'interfaccia della riga di comando di Azure, questa guida introduttiva richiede l'interfaccia della riga di comando versione __2.0.28__ o successiva. Eseguire `az --version` per assicurarsi che l'installazione dell'interfaccia della riga di comando rispetti questo requisito. Se è necessario eseguire l'installazione o l'aggiornamento, vedere [Installare l'interfaccia della riga di comando di Azure 2.0](/cli/azure/install-azure-cli).
+Se si usa un'installazione locale dell'interfaccia della riga di comando di Azure, questa guida introduttiva richiede l'interfaccia della riga di comando versione __2.0.28__ o successiva. Eseguire `az --version` per assicurarsi che l'installazione dell'interfaccia della riga di comando rispetti questo requisito. Se è necessario eseguire l'installazione o l'aggiornamento, vedere [Installare l'interfaccia della riga di comando di Azure](/cli/azure/install-azure-cli).
 
-## <a name="install-the-azure-sdk-for-go"></a>Installare Azure SDK per Go 
+## <a name="install-the-azure-sdk-for-go"></a>Installare Azure SDK per Go
 
 [!INCLUDE [azure-sdk-go-get](includes/azure-sdk-go-get.md)]
 
@@ -242,7 +242,9 @@ I file della distribuzione vengono caricati da `readJSON`, per cui non vengono f
     }
 ```
 
-Il codice segue lo stesso criterio della creazione del gruppo di risorse. Viene creato un nuovo client, a cui viene consentita l'autenticazione in Azure, e quindi viene chiamato un metodo. Il metodo ha addirittura lo stesso nome (`CreateOrUpdate`) del metodo corrispondente per i gruppi di risorse. Questo criterio viene visualizzato in tutto l'SDK. I metodi che eseguono operazioni simili hanno in genere lo stesso nome.
+Il codice segue lo stesso criterio della creazione del gruppo di risorse. Viene creato un nuovo client, a cui viene consentita l'autenticazione in Azure, e quindi viene chiamato un metodo.
+Il metodo ha addirittura lo stesso nome (`CreateOrUpdate`) del metodo corrispondente per i gruppi di risorse. Questo criterio viene visualizzato in tutto l'SDK.
+I metodi che eseguono operazioni simili hanno in genere lo stesso nome.
 
 La differenza principale è costituita dal valore restituito del metodo `deploymentsClient.CreateOrUpdate`. Questo valore, di tipo [Future](https://godoc.org/github.com/Azure/go-autorest/autorest/azure#Future), segue lo [schema progettuale degli oggetti Future](https://en.wikipedia.org/wiki/Futures_and_promises). Gli oggetti Future rappresentano un'operazione con esecuzione prolungata in Azure per cui è possibile eseguire il polling, annullare o bloccare il loro completamento.
 

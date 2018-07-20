@@ -12,12 +12,12 @@ ms.technology: azure-sdk-go
 ms.devlang: go
 ms.service: active-directory
 ms.component: authentication
-ms.openlocfilehash: c7970167070bdf1f3fc75692f3e34268801c65df
-ms.sourcegitcommit: 181d4e0b164cf39b3feac346f559596bd19c94db
+ms.openlocfilehash: f5e76fc745512a3a52172f560c3a24f510e96feb
+ms.sourcegitcommit: d1790b317a8fcb4d672c654dac2a925a976589d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38067000"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039540"
 ---
 # <a name="authentication-methods-in-the-azure-sdk-for-go"></a>Metodi di autenticazione in Azure SDK per Go
 
@@ -30,19 +30,19 @@ Azure SDK per Go offre diversi tipi di autenticazione che usano set di credenzia
 | Tipo di autenticazione | Consigliato quando... |
 |---------------------|---------------------|
 | Autenticazione basata su certificati | È presente un certificato X509 configurato per un utente o un'entità servizio di Azure Active Directory (AAD). Per altre informazioni, vedere [Introduzione all'autenticazione basata su certificati di Azure Active Directory]. |
-| Credenziali del client | Si dispone di un'entità servizio configurata per l'applicazione o una classe di applicazioni a cui questa appartiene. Per altre informazioni, vedere [Creare un'entità servizio con l'interfaccia della riga di comando di Azure 2.0]. |
+| Credenziali del client | Si dispone di un'entità servizio configurata per l'applicazione o una classe di applicazioni a cui questa appartiene. Per altre informazioni, vedere [Creare un'entità servizio con l'interfaccia della riga di comando di Azure]. |
 | Identità del servizio gestita | L'applicazione viene eseguita su una risorsa di Azure che è stata configurata con l'identità del servizio gestita. Per altre informazioni, vedere [Identità del servizio gestita per le risorse di Azure]. |
 | Token dispositivo | L'applicazione deve essere usata __soltanto__ in modo interattivo e disporrà di una varietà di utenti, potenzialmente da più tenant AAD. Gli utenti hanno accesso a un Web browser per eseguire l'accesso. Per altre informazioni, vedere [Uso dell'autenticazione tramite token dispositivo](#use-device-token-authentication).|
 | Nome utente/password | Si dispone di un'applicazione interattiva che non può usare alcun altro metodo di autenticazione. Gli utenti non dispongono dell'autenticazione a più fattori abilitata per l'accesso ad AAD. |
 
 > [!IMPORTANT]
 > Se si usa un tipo di autenticazione diverso dalle credenziali del client, l'applicazione deve essere registrata in Azure Active Directory. Per altri dettagli, vedere [Integrazione di applicazioni con Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications).
-
+>
 > [!NOTE]
 > A meno che non si abbiano esigenze particolari, evitare l'autenticazione con nome utente/password. Nelle situazioni in cui è opportuno eseguire l'accesso basato sull'utente è possibile usare l'autenticazione tramite token.
 
 [Introduzione all'autenticazione basata su certificati di Azure Active Directory]: /azure/active-directory/active-directory-certificate-based-authentication-get-started
-[Creare un'entità servizio con l'interfaccia della riga di comando di Azure 2.0]: /cli/azure/create-an-azure-service-principal-azure-cli
+[Creare un'entità servizio con l'interfaccia della riga di comando di Azure]: /cli/azure/create-an-azure-service-principal-azure-cli
 [Identità del servizio gestita per le risorse di Azure]: /azure/active-directory/managed-service-identity/overview
 
 Questi tipi di autenticazione sono disponibili tramite metodi diversi. L'[_autenticazione basata su ambiente_](#use-environment-based-authentication) legge le credenziali direttamente dall'ambiente del programma. L'[_autenticazione basata su file_](#use-file-based-authentication) carica un file contenente le credenziali dell'entità servizio. L'[_autenticazione basata su client_](#use-an-authentication-client) usa un oggetto nel codice Go e chiede all'utente di fornire le credenziali durante l'esecuzione del programma. Infine, l'[_autenticazione tramite token dispositivo_](#use-device-token-authentication) richiede agli utenti di accedere in modo interattivo con un token tramite un Web browser e non può essere usata insieme all'autenticazione basata su file o ambiente.
@@ -54,7 +54,7 @@ Tutti i tipi e le funzioni di autenticazione sono disponibili nel pacchetto `git
 
 ## <a name="use-environment-based-authentication"></a>Usare l'autenticazione basata su ambiente
 
-Se si esegue l'applicazione in un ambiente rigorosamente controllato, ad esempio in un contenitore, l'autenticazione basata su ambiente è una scelta naturale. Configurare l'ambiente shell prima di eseguire l'applicazione e prima che Go SDK legga queste variabili di ambiente in fase di runtime per l'autenticazione con Azure. 
+Se si esegue l'applicazione in un ambiente rigorosamente controllato, ad esempio in un contenitore, l'autenticazione basata su ambiente è una scelta naturale. Configurare l'ambiente shell prima di eseguire l'applicazione e prima che Go SDK legga queste variabili di ambiente in fase di runtime per l'autenticazione con Azure.
 
 L'autenticazione basata su ambiente è supportata per tutti i metodi di autenticazione ad eccezione dei token dispositivo, valutati nell'ordine seguente: credenziali client, certificati, nome utente/password e identità del servizio gestita. Se non è impostata una variabile di ambiente necessaria o l'SDK riceve un rifiuto dal servizio di autenticazione, viene eseguito un tentativo con il tipo di autenticazione successivo. Se l'SDK non è in grado di eseguire l'autenticazione dall'ambiente, viene restituito un errore.
 
@@ -109,10 +109,9 @@ Queste variabili possono essere recuperate dalle informazioni sui metadati di Az
 
 Per altre informazioni su come usare Azure SDK per Go in Azure Stack, vedere [Usare profili di versioni delle API con Go in Azure Stack](https://docs.microsoft.com/azure/azure-stack/user/azure-stack-version-profiles-go)
 
-
 ## <a name="use-file-based-authentication"></a>Usare l'autenticazione basata su file
 
-L'autenticazione basata su file funziona solo con le credenziali del client quando vengono archiviate in un formato di file locale generato dall'[interfaccia della riga di comando di Azure 2.0](/cli/azure). È possibile creare facilmente questo file quando si crea una nuova entità servizio con il parametro `--sdk-auth`. Se si intende usare l'autenticazione basata su file, assicurarsi che questo argomento venga fornito quando si crea un'entità servizio. Poiché l'interfaccia della riga di comando stampa l'output in `stdout`, reindirizzare l'output verso un file.
+L'autenticazione basata su file funziona solo con le credenziali del client quando vengono archiviate in un formato di file locale generato dall'[interfaccia della riga di comando di Azure](/cli/azure). È possibile creare facilmente questo file quando si crea una nuova entità servizio con il parametro `--sdk-auth`. Se si intende usare l'autenticazione basata su file, assicurarsi che questo argomento venga fornito quando si crea un'entità servizio. Poiché l'interfaccia della riga di comando stampa l'output in `stdout`, reindirizzare l'output verso un file.
 
 ```azurecli
 az ad sp create-for-rbac --sdk-auth > azure.auth
@@ -127,7 +126,7 @@ import "github.com/Azure/go-autorest/autorest/azure/auth"
 authorizer, err := NewAuthorizerFromFile(azure.PublicCloud.ResourceManagerEndpoint)
 ```
 
-Per altre informazioni sull'uso delle entità servizio e sulla gestione delle relative autorizzazioni di accesso, vedere [Creare un'entità servizio con l'interfaccia della riga di comando di Azure 2.0].
+Per altre informazioni sull'uso delle entità servizio e sulla gestione delle relative autorizzazioni di accesso, vedere [Creare un'entità servizio con l'interfaccia della riga di comando di Azure].
 
 ## <a name="use-device-token-authentication"></a>Uso dell'autenticazione tramite token dispositivo
 
