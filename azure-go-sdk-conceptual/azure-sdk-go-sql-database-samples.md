@@ -10,20 +10,19 @@ ms.prod: azure
 ms.technology: azure-sdk-go
 ms.service: sql-database
 ms.devlang: go
-ms.openlocfilehash: faeb4a524303d2a7985d1a657171a8bbc681ace5
-ms.sourcegitcommit: f08abf902b48f8173aa6e261084ff2cfc9043305
+ms.openlocfilehash: 17eab667721acace20bab79b8290d1031292be12
+ms.sourcegitcommit: 0f581979216f7c9d4913681a6d9f6fe09af26e43
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32319799"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39475892"
 ---
-# <a name="azure-sdk-for-go-samples-for-azure-sql-database"></a><span data-ttu-id="4bf55-103">Esempi di Azure SDK per Go per il database SQL di Azure</span><span class="sxs-lookup"><span data-stu-id="4bf55-103">Azure SDK for Go samples for Azure SQL Database</span></span>
+# <a name="azure-sdk-for-go-samples-for-azure-sql-database"></a><span data-ttu-id="6440f-103">Esempi di Azure SDK per Go per il database SQL di Azure</span><span class="sxs-lookup"><span data-stu-id="6440f-103">Azure SDK for Go samples for Azure SQL Database</span></span>
 
-<span data-ttu-id="4bf55-104">La tabella seguente include collegamenti a esempi selezionati di codice sorgente di Go che è possibile usare per lavorare con il database SQL di Azure.</span><span class="sxs-lookup"><span data-stu-id="4bf55-104">The following table links to selected samples of Go source code that you can use to work with Azure SQL Database.</span></span>
+<span data-ttu-id="6440f-104">La tabella seguente include collegamenti a esempi selezionati di codice sorgente di Go che è possibile usare per lavorare con il database SQL di Azure.</span><span class="sxs-lookup"><span data-stu-id="6440f-104">The following table links to selected samples of Go source code that you can use to work with Azure SQL Database.</span></span>
 
-<span data-ttu-id="4bf55-105">Tutti gli esempi per Azure SDK per Go sono disponibili su [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).</span><span class="sxs-lookup"><span data-stu-id="4bf55-105">All samples for the Azure SDK for Go are available on [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).</span></span>
+<span data-ttu-id="6440f-105">Tutti gli esempi per Azure SDK per Go sono disponibili su [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).</span><span class="sxs-lookup"><span data-stu-id="6440f-105">All samples for the Azure SDK for Go are available on [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).</span></span>
 
-| <span data-ttu-id="4bf55-106">NOME</span><span class="sxs-lookup"><span data-stu-id="4bf55-106">Name</span></span> | <span data-ttu-id="4bf55-107">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="4bf55-107">Description</span></span> |
+| <span data-ttu-id="6440f-106">NOME</span><span class="sxs-lookup"><span data-stu-id="6440f-106">Name</span></span> | <span data-ttu-id="6440f-107">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="6440f-107">Description</span></span> |
 |------|-------------|
-| [<span data-ttu-id="4bf55-108">sql/sql</span><span class="sxs-lookup"><span data-stu-id="4bf55-108">sql/sql</span></span>](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/sql/sql.go) | <span data-ttu-id="4bf55-109">Consente di creare e gestire nuovi server SQL e di lavorare con i database in tali server.</span><span class="sxs-lookup"><span data-stu-id="4bf55-109">Create and manage new SQL servers, and work with databases on them.</span></span> |
-| [<span data-ttu-id="4bf55-110">sql/queries</span><span class="sxs-lookup"><span data-stu-id="4bf55-110">sql/queries</span></span>](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/sql/queries.go) | <span data-ttu-id="4bf55-111">Consente di creare tabelle, aggiungere righe ed eseguire query sui dati nel database SQL di Azure.</span><span class="sxs-lookup"><span data-stu-id="4bf55-111">Create tables, add rows, and query data in Azure SQL Database.</span></span> |
+| [<span data-ttu-id="6440f-108">sql/sql</span><span class="sxs-lookup"><span data-stu-id="6440f-108">sql/sql</span></span>](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/sql/sql.go) | <span data-ttu-id="6440f-109">Consente di creare e gestire nuovi server SQL e di lavorare con i database in tali server.</span><span class="sxs-lookup"><span data-stu-id="6440f-109">Create and manage new SQL servers, and work with databases on them.</span></span> |
