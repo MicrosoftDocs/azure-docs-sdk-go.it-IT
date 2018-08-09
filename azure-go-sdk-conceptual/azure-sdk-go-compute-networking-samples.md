@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure-sdk-go
 ms.service: virtual-machines
 ms.devlang: go
-ms.openlocfilehash: 4837572a50ae934e71bfe49d916c01e131bb6d83
-ms.sourcegitcommit: f08abf902b48f8173aa6e261084ff2cfc9043305
+ms.openlocfilehash: 3b31716ee42c638bab4a6dd99b9eb0d7c07e51a4
+ms.sourcegitcommit: 0f581979216f7c9d4913681a6d9f6fe09af26e43
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32319697"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39475790"
 ---
 # <a name="azure-sdk-for-go-samples-for-compute-and-networking"></a>Esempi di Azure SDK per Go per il calcolo e la rete
 
@@ -26,5 +26,7 @@ Tutti gli esempi per Azure SDK per Go sono disponibili su [GitHub](https://githu
 | NOME | DESCRIZIONE |
 |------|-------------|
 | [network/network](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/network/network.go) | Consente di creare, aggiornare, eliminare risorse di rete come reti virtuali, subnet e gruppi di sicurezza di rete ed eseguire query al loro interno. |
-| [compute/loadbalancer](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/loadbalancer.go) | Consente di creare gruppi di disponibilità ed eseguire query al loro interno e di creare macchine virtuali con bilanciamento del carico. |
-| [compute/compute](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/compute.go) | Consente di creare, eliminare e aggiornare le macchine virtuali e gestirne l'energia. Consente di lavorare con dischi dati e gestisce il disco del sistema operativo della macchina virtuale. |
+| [compute/vm_disk](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_disk.go) | Consente di creare, collegare, rimuovere, aggiornare e crittografare i dischi dati per una macchina virtuale. |
+| [compute/vm](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm.go) | Consente di creare, aggiornare, disattivare e gestire le macchine virtuali. |
+| [compute/vm_with_availabilityset](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_with_availabilityset.go) | Consente di creare set di disponibilità e servizi di bilanciamento del carico per le macchine virtuali. |
+| [compute/vm_with_identity](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_with_identity.go) | Consente di creare e gestire identità del servizio gestite (MSI) per le macchine virtuali. |
