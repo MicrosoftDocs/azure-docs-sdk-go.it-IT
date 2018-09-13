@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: azure
 ms.technology: azure-sdk-go
 ms.devlang: go
-ms.openlocfilehash: 3388359bba791c87025b6ffd0e6b476f95589f73
-ms.sourcegitcommit: 81e97407e6139375bf7357045e818c87a17dcde1
+ms.openlocfilehash: 013a771345d96f0fa8dbece3218a01650744f70b
+ms.sourcegitcommit: 8b9e10b960150dc08f046ab840d6a5627410db29
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262981"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44059187"
 ---
 # <a name="install-the-azure-sdk-for-go"></a>Installare Azure SDK per Go
 
@@ -37,9 +37,9 @@ Alcuni servizi di Azure includono un proprio SDK per Go e non sono compresi nel 
 
 ## <a name="vendor-the-azure-sdk-for-go"></a>Eseguire il vendoring di Azure SDK per Go
 
-È possibile eseguire il vendoring di Azure SDK per Go tramite [dep](https://github.com/golang/dep). Per motivi di stabilità è consigliabile eseguire il vendoring. Per usare il supporto per `dep`, aggiungere `github.com/Azure/azure-sdk-for-go` a una sezione di `[[constraint]]` del file `Gopkg.toml`. Per eseguire ad esempio il vendoring sulla versione `14.0.0`, aggiungere la voce seguente:
+È possibile eseguire il vendoring di Azure SDK per Go tramite [dep](https://github.com/golang/dep). Per motivi di stabilità è consigliabile eseguire il vendoring. Per usare `dep` nel proprio progetto, aggiungere `github.com/Azure/azure-sdk-for-go` a una sezione `[[constraint]]` di `Gopkg.toml`. Per eseguire ad esempio il vendoring sulla versione `14.0.0`, aggiungere la voce seguente:
 
-```
+```toml
 [[constraint]]
 name = "github.com/Azure/azure-sdk-for-go"
 version = "14.0.0"
@@ -62,13 +62,14 @@ Si ottiene un elenco completo dei moduli disponibili da GoDoc per i [servizi dis
 [autorest/adal]: https://godoc.org/github.com/Azure/go-autorest/autorest/adal
 [autorest/to]: https://godoc.org/github.com/Azure/go-autorest/autorest/to
 
-Il controllo delle versioni dei moduli per i servizi di Azure viene eseguito indipendentemente dalle rispettive API dell'SDK. Queste versioni sono parte del percorso di importazione del modulo e derivano da una _versione del servizio_ o da un _profilo_. È attualmente consigliabile usare una versione specifica del servizio per lo sviluppo e il rilascio. I servizi si trovano nel modulo `services`. Il percorso completo per l'importazione è il nome del servizio, seguito dalla versione in formato `YYYY-MM-DD` e quindi seguito nuovamente dal nome del servizio. Per includere ad esempio la versione `2017-03-30` del servizio di calcolo:
+Il controllo delle versioni dei pacchetti Go e dei servizi di Azure viene eseguito in modo indipendente. Le versioni del servizio sono parte del percorso di importazione del modulo, disponibile nel modulo `services`. Il percorso completo per il modulo è il nome del servizio, seguito dalla versione in formato `YYYY-MM-DD` e quindi seguito nuovamente dal nome del servizio. Per importare ad esempio la versione `2017-03-30` del servizio di calcolo:
 
 ```go
 import "github.com/Azure/azure-sdk-for-go/services/compute/mgmt/2017-03-30/compute"
 ```
 
-È attualmente consigliabile usare la versione più recente di un servizio, a meno che non esistano motivi specifici per procedere diversamente.
+È consigliabile usare la versione più recente di un servizio all'inizio dello sviluppo e mantenere la coerenza a livello di versione.
+È possibile che le diverse versioni presentino modifiche ai requisiti del servizio che potrebbero provocare interruzioni del codice, anche se non vengono applicati aggiornamenti a Go SDK in tale intervallo di tempo.
 
 Se è necessario uno snapshot collettivo dei servizi, è anche possibile selezionare una singola versione del profilo. La versione dell'unico profilo bloccato è ora `2017-03-09`, che potrebbe non includere le funzionalità più recenti dei servizi. I profili sono disponibili nel modulo `profiles`, con la rispettiva versione in formato `YYYY-MM-DD`. I servizi vengono raggruppati sotto la rispettiva versione del profilo. Per importare ad esempio il modulo di gestione delle risorse di Azure dal profilo `2017-03-09`:
 
