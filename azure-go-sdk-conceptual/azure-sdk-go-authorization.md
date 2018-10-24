@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.technology: azure-sdk-go
 ms.devlang: go
 ms.component: authentication
-ms.openlocfilehash: f5c2c56e43828f0bedad0b5781dc71991ce1fd3e
-ms.sourcegitcommit: 172f81dd6e4c6a275dc8031815aa87cdb488cbf0
+ms.openlocfilehash: c2c3dccfa8da5cfe57fee0b90139002068982560
+ms.sourcegitcommit: 887b15afcdeaf926a5f3d21b64e4045167fd062c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231676"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49481983"
 ---
 # <a name="authentication-methods-in-the-azure-sdk-for-go"></a>Metodi di autenticazione in Azure SDK per Go
 
@@ -70,20 +70,21 @@ Se un tipo di autenticazione ha valori non configurati o viene rifiutato, l'SDK 
 
 La tabella seguente illustra in dettaglio le variabili di ambiente che devono essere impostate per ogni tipo di autenticazione supportato dall'autenticazione basata su ambiente.
 
-| Tipo di autenticazione | Variabile di ambiente | DESCRIZIONE |
-| ------------------- | -------------------- | ----------- |
-| __Credenziali del client__ | `AZURE_TENANT_ID` | ID del tenant di Active Directory a cui appartiene l'entità servizio. |
-| | `AZURE_CLIENT_ID` | Nome o ID dell'entità servizio. |
-| | `AZURE_CLIENT_SECRET` | Segreto associato all'entità servizio. |
-| __Certificate__ | `AZURE_TENANT_ID` | ID del tenant di Active Directory che viene registrato con il certificato. |
-| | `AZURE_CLIENT_ID` | ID client dell'applicazione associato al certificato. |
-| | `AZURE_CERTIFICATE_PATH` | Percorso del file di certificato client. |
-| | `AZURE_CERTIFICATE_PASSWORD` | Password del certificato client. |
-| __Nome utente/password__ | `AZURE_TENANT_ID` | ID del tenant di Active Directory a cui appartiene l'utente. |
-| | `AZURE_CLIENT_ID` | ID client dell'applicazione. |
-| | `AZURE_USERNAME` | Nome utente con cui accedere. |
-| | `AZURE_PASSWORD` | Password con cui accedere. |
-| __Identità gestita__ | | Non sono necessarie credenziali per l'autenticazione con identità gestita. L'applicazione deve essere eseguita in una risorsa di Azure configurata per l'uso delle identità gestite. Per informazioni dettagliate, vedere l'articolo relativo alle [identità gestite per le risorse di Azure]. |
+
+|  Tipo di autenticazione   |     Variabile di ambiente     |                                                                                                     DESCRIZIONE                                                                                                      |
+|------------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Credenziali del client** |      `AZURE_TENANT_ID`       |                                                                    ID del tenant di Active Directory a cui appartiene l'entità servizio.                                                                     |
+|                        |      `AZURE_CLIENT_ID`       |                                                                                       Nome o ID dell'entità servizio.                                                                                       |
+|                        |    `AZURE_CLIENT_SECRET`     |                                                                                  Segreto associato all'entità servizio.                                                                                   |
+|    **Certificate**     |      `AZURE_TENANT_ID`       |                                                                   ID del tenant di Active Directory che viene registrato con il certificato.                                                                    |
+|                        |      `AZURE_CLIENT_ID`       |                                                                              ID client dell'applicazione associato al certificato.                                                                              |
+|                        |   `AZURE_CERTIFICATE_PATH`   |                                                                                       Percorso del file di certificato client.                                                                                       |
+|                        | `AZURE_CERTIFICATE_PASSWORD` |                                                                                       Password del certificato client.                                                                                       |
+| **Nome utente/password**  |      `AZURE_TENANT_ID`       |                                                                           ID del tenant di Active Directory a cui appartiene l'utente.                                                                           |
+|                        |      `AZURE_CLIENT_ID`       |                                                                                              ID client dell'applicazione.                                                                                              |
+|                        |       `AZURE_USERNAME`       |                                                                                            Nome utente con cui accedere.                                                                                             |
+|                        |       `AZURE_PASSWORD`       |                                                                                            Password con cui accedere.                                                                                             |
+|  **Identità gestita**  |                              | Non sono necessarie credenziali per l'autenticazione con identità gestita. L'applicazione deve essere eseguita in una risorsa di Azure configurata per l'uso delle identità gestite. Per informazioni dettagliate, vedere l'articolo relativo alle [identità gestite per le risorse di Azure]. |
 
 Per connettersi a un endpoint di gestione o cloud diverso dal cloud pubblico di Azure, impostare anche le variabili di ambiente seguenti. I motivi più comuni per impostarle includono l'uso di Azure Stack, un cloud in un'area geografica diversa o il modello di distribuzione classica.
 
