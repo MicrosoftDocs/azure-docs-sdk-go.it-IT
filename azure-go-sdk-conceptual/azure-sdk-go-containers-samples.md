@@ -24,5 +24,5 @@ Tutti gli esempi per Azure SDK per Go sono disponibili su [GitHub](https://githu
 
 | NOME | DESCRIZIONE |
 |------|-------------|
-| [compute/container_instance](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/container_instance.go) | Consente di lavorare con i gruppi di contenitori in Istanze di contenitore di Azure. Consente di creare e modificare contenitori in un gruppo di ACI. |
+| [compute/container_instance](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/container_instance.go) | Consente di lavorare con i gruppi di contenitori in Istanze di Azure Container. Consente di creare e modificare contenitori in un gruppo di ACI. |
 | [compute/container_cluster](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/container_cluster.go) | Consente di creare, eliminare ed esaminare i client del servizio Azure Kubernetes. |
