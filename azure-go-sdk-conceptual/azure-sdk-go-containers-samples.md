@@ -1,6 +1,6 @@
 ---
 title: Esempi di Azure SDK per Go per i contenitori
-description: Esempi selezionati per l'uso di Istanze di contenitore di Azure e del servizio Kubernetes di Azure da Azure SDK per Go.
+description: Esempi selezionati per l'uso di Istanze di Azure Container e del servizio Azure Kubernetes da Azure SDK per Go.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
@@ -18,11 +18,11 @@ ms.locfileid: "44059060"
 ---
 # <a name="azure-sdk-for-go-samples-for-containers"></a>Esempi di Azure SDK per Go per i contenitori
 
-La tabella seguente include collegamenti a esempi selezionati che illustrano la gestione di Istanze di contenitore di Azure e del servizio Kubernetes di Azure da Azure SDK per Go.
+La tabella seguente include collegamenti a esempi selezionati che illustrano la gestione di Istanze di Azure Container e del servizio Azure Kubernetes da Azure SDK per Go.
 
 Tutti gli esempi per Azure SDK per Go sono disponibili su [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).
 
 | NOME | DESCRIZIONE |
 |------|-------------|
 | [compute/container_instance](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/container_instance.go) | Consente di lavorare con i gruppi di contenitori in Istanze di contenitore di Azure. Consente di creare e modificare contenitori in un gruppo di ACI. |
-| [compute/container_cluster](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/container_cluster.go) | Consente di creare, eliminare ed esaminare i client di Azure Kubernetes Service (AKS). |
+| [compute/container_cluster](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/container_cluster.go) | Consente di creare, eliminare ed esaminare i client del servizio Azure Kubernetes. |
